@@ -15,3 +15,13 @@ function showMessage() {
 console.log(userName); // john
 showMessage();
 console.log(userName); // updated after the function call only
+
+
+let userName1 = 'Priya';
+function showMessage1() {
+  let userName1 = "Sri"; // local variable newly declared(function scoop)
+  let message1 = 'Hello,'+userName1; // Sri
+  console.log(message1);
+}
+showMessage1();
+console.log(userName1);//global gets printed
