@@ -74,3 +74,30 @@ Object.assign(Bird.prototype, Fly);
 
 const b = new Bird();
 b.fly();
+
+class Birdy {
+  constructor(name) {
+    this.name = name;
+    this.hasWings = true;
+  }
+  eating(){
+    return "Im eating...."
+  }
+}
+
+//inheritance and use of super
+class Penguin extends Birdy {
+  constructor(name, speed) {
+    super(name); // Calling the Parent!
+    this.speed = speed; // Now we can use 'this' of penguin
+    console.log("Name:"+name,"speed:"+speed)
+  }
+  eating(){
+    return super.eating()+"Im eating here too"
+  }
+}
+
+const myPingu = new Penguin("Pingu", "10mph");
+console.log(myPingu)
+console.log(myPingu.eating())
+
